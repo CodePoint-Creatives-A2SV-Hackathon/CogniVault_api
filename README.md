@@ -1,4 +1,17 @@
+# Insight Engine
 
+Welcome to the Insight Engine repository! Insight Engine is an AI-enhanced knowledge base system designed to provide intelligent guidance across all organizational aspects while considering the company's structure.
+
+## Table of Contents
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#project-structure">Project Structure</a></li>
+  <li><a href="#getting-started">Getting Started</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#license">License</a></li>
+</ul>
 <h2 id="overview">Overview</h2>
 Insight Engine aims to revolutionize how companies manage and utilize their knowledge base by leveraging AI to provide smart organizational mapping, context-aware queries, intelligent document management, AI-driven onboarding assistance, collaborative knowledge building, and seamless integration with enterprise tools. This tool is specifically designed to enhance productivity, streamline processes, and foster a collaborative work environment.
 <h2 id="features">Features</h2>
