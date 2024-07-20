@@ -1,5 +1,4 @@
 import * as express from 'express'
-import * as bodyParser from "body-parser";
 import { Request, Response } from "express";
 import { AppDataSource } from "./data-source";
 import { Routes } from "./routes";
@@ -7,8 +6,6 @@ import * as path from "path";
 import * as fileUpload from "express-fileupload";
 import * as cors from "cors";
 import { ApiResponse } from './utils/response..util';
-
-
 
 AppDataSource.initialize()
   .then(async () => {
@@ -35,7 +32,10 @@ AppDataSource.initialize()
               res,
               next
             );
-            res.status(result.statusCode).json(result.data);
+            res.status(result.statusCode).json({
+              message: result.message,
+              data: result.data
+            });
           } catch (error) {
             console.error(error);
             res.status(500).json({ message: "Internal server error" });
@@ -43,8 +43,6 @@ AppDataSource.initialize()
         }
       );
     })
-    app.listen(3000);
-
     let uploadPath = path.join(__dirname, "..", "uploads");
 
     app.use("/static/images", express.static(uploadPath));
@@ -52,5 +50,5 @@ AppDataSource.initialize()
     // start express server
     app.listen(3000);
   })
-  .then((e) => console.log("Server started"))
+  .then(_ => console.log('Server started'))
   .catch((error) => console.log(error));

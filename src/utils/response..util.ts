@@ -18,8 +18,8 @@ export const sendNotFound = (res: Response, message: string, data?: any) => {
   });
 };
 
-
 export interface ApiResponse<T> {
-  statusCode: number;
-  data: T;
+  statusCode: number; 
+  message: string;
+  data?: T;
 }

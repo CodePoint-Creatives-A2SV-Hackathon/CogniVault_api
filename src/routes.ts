@@ -1,4 +1,4 @@
 
-import { sampleRouter } from "./routes/sample.route"
+import { homeRouter } from "./routes/home.route"
 
-export const Routes = [...sampleRouter,];
+export const Routes = [...homeRouter,];
